@@ -1,0 +1,11 @@
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent { docker { image 'c++' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'c++ --version'
+            }
+        }
+    }
+}
